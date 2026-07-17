@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  /* Brand & backgrounds */
+  --color-brand-primary: #FF2056;
+  --color-brand-primary-hover: #E11D48;
+  --color-brand-primary-soft: #FFDDE8;
+  --color-brand-primary-tint: #FFE1EE;
+  --color-page-blush: #FFF7FB;
+  --color-gradient-blush: #FFF4FA;
+  --color-warm-ivory: #FAF7F2;
+  --color-cream: #FFF9F3;
+  --color-white: #FFFFFF;
+
+  /* Text colors */
+  --color-heading: #18181B;
+  --color-text-primary: #27272A;
+  --color-text-secondary: #51515B;
+  --color-text-muted: #71717B;
+  --color-text-disabled: #A1A1AA;
+
+  /* Mood/feature accents */
+  --color-soft-blue: #DDEFFF;
+  --color-soft-green: #D8EEDB;
+  --color-soft-lavender: #F4EFFA;
+  --color-lavender-accent: #6D28D9;
+  --color-blue-accent: #1B4E7A;
+  --color-green-accent: #166534;
+  --color-orange-soft: #FFE8D8;
+  --color-orange-accent: #C2410C;
+
+  /* Gradients */
+  --background-image-hero-gradient: linear-gradient(to bottom, #FFF4FA, #FAF7F2, #FFFFFF);
+}
+
+/* Custom UI Micro-Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.99) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.6s ease-in-out infinite;
+}
+
+.animate-float-1 {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatGentle 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes twinkle1 {
+  0%, 100% { opacity: 0.35; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.15) rotate(15deg); }
+}
+
+@keyframes twinkle2 {
+  0%, 100% { opacity: 0.45; transform: scale(1.15) rotate(0deg); }
+  50% { opacity: 0.85; transform: scale(0.8) rotate(-15deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(4deg); }
+}
+
+.animate-twinkle-1 {
+  animation: twinkle1 3s ease-in-out infinite;
+}
+
+.animate-twinkle-2 {
+  animation: twinkle2 2.6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.2s ease-in-out infinite;
+}
+
+/* Safe Area Paddings */
+.pb-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* Hide Scrollbars */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-page-blush);
+  color: var(--color-text-primary);
+}
+
+/* Staggered Children Animation within active/visible Section */
+.stagger-container .stagger-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.section-visible .stagger-container .stagger-item,
+.stagger-container.section-visible .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays (60ms steps for rapid yet distinguishable rhythm) */
+.section-visible .stagger-container .stagger-item:nth-child(1),
+.stagger-container.section-visible .stagger-item:nth-child(1) { transition-delay: 60ms; }
+.section-visible .stagger-container .stagger-item:nth-child(2),
+.stagger-container.section-visible .stagger-item:nth-child(2) { transition-delay: 120ms; }
+.section-visible .stagger-container .stagger-item:nth-child(3),
+.stagger-container.section-visible .stagger-item:nth-child(3) { transition-delay: 180ms; }
+.section-visible .stagger-container .stagger-item:nth-child(4),
+.stagger-container.section-visible .stagger-item:nth-child(4) { transition-delay: 240ms; }
+.section-visible .stagger-container .stagger-item:nth-child(5),
+.stagger-container.section-visible .stagger-item:nth-child(5) { transition-delay: 300ms; }
+.section-visible .stagger-container .stagger-item:nth-child(6),
+.stagger-container.section-visible .stagger-item:nth-child(6) { transition-delay: 360ms; }
+.section-visible .stagger-container .stagger-item:nth-child(7),
+.stagger-container.section-visible .stagger-item:nth-child(7) { transition-delay: 420ms; }
+.section-visible .stagger-container .stagger-item:nth-child(8),
+.stagger-container.section-visible .stagger-item:nth-child(8) { transition-delay: 480ms; }
+
+/* Global prefers-reduced-motion media query to bypass and disable all animations immediately */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+  
+  .stagger-container .stagger-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

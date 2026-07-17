@@ -1,0 +1,6 @@
+{
+  "name": "DearDiary",
+  "description": "An empathetic AI-powered journaling and reflection application with mood logging, statistical insights, and a supportive chat companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

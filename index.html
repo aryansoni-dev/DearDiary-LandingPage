@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DearDiary - AI Journaling App for Reflection, Mood Tracking, and Insights</title>
+
+    <!-- Suppress benign Vite HMR websocket unhandled rejections from showing red error overlays -->
+    <script>
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event.reason && (
+          event.reason.message?.includes('WebSocket') || 
+          event.reason.message?.includes('vite') ||
+          String(event.reason).includes('WebSocket')
+        )) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (event.message && (
+          event.message.includes('WebSocket') || 
+          event.message.includes('vite')
+        )) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    
+    <!-- Meta Description & SEO -->
+    <meta name="description" content="DearDiary is a private AI journaling companion that helps you write consistently, track moods, reflect with guided prompts, and discover emotional patterns over time." />
+    <meta name="keywords" content="AI journaling app, mood tracking app, private journal app, guided reflection app, emotional insights app, mindful journaling, journal with AI" />
+    <meta name="author" content="DearDiary" />
+    
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DearDiary - AI Journaling App for Reflection, Mood Tracking, and Insights" />
+    <meta property="og:description" content="DearDiary is a private AI journaling companion that helps you write consistently, track moods, reflect with guided prompts, and discover emotional patterns over time." />
+    <meta property="og:image" content="https://res.cloudinary.com/sgw0dct9/image/upload/f_auto,q_auto/v1783934357/github-cover_z3bs5o.png" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DearDiary - AI Journaling App for Reflection, Mood Tracking, and Insights" />
+    <meta name="twitter:description" content="DearDiary is a private AI journaling companion that helps you write consistently, track moods, reflect with guided prompts, and discover emotional patterns over time." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/sgw0dct9/image/upload/f_auto,q_auto/v1783934357/github-cover_z3bs5o.png" />
+    
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/sgw0dct9/image/upload/f_auto,q_auto/v1783934358/favicon_qxjblu.png" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/sgw0dct9/image/upload/f_auto,q_auto/v1783934356/app-logo_de4ais.png" />
+    
+    <!-- Canonical Link Placeholder (TODO: Replace with final production URL when domain is configured) -->
+    <!-- <link rel="canonical" href="https://yourfinaldomain.com/" /> -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
