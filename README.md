@@ -1,20 +1,34 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+  <img src="assets/images/github-cover-new.png" alt="DearDiary — reflect, understand, grow" width="100%" />
+
+  # DearDiary
+
+  **A private AI journaling companion for reflection, mood tracking, and emotional insight.**
 </div>
 
-# Run and deploy your AI Studio app
+DearDiary helps you build a gentle, consistent reflection habit. Capture your thoughts, check in with your mood, revisit meaningful moments, and discover emotional patterns over time—all within a calm and comforting journaling experience.
 
-This contains everything you need to run your app locally.
+This repository contains the standalone DearDiary landing page, created to introduce the app and let people join the early-access waitlist.
 
-View your app in AI Studio: https://ai.studio/apps/e4dca3b9-6530-40aa-b258-11febca16f8a
+## The DearDiary experience
 
-## Run Locally
+- **Guided reflection** — Write freely or use thoughtful prompts when you need help getting started.
+- **Mood check-ins** — Log how you feel and see how your emotions change over time.
+- **Gentle AI reflections** — Receive compassionate observations designed to help you notice what matters.
+- **Personal insights** — Explore recurring moods, themes, and weekly reflection patterns.
+- **Journal history** — Revisit past entries, memories, and important moments whenever you choose.
+- **AI journal chat** — Ask meaningful questions across your journal history and receive contextual answers.
 
-**Prerequisites:**  Node.js
+## Private by design
 
+DearDiary is designed around privacy, protection, and user control. The app is local-first with end-to-end encryption, and AI only processes what is needed for the reflections or insights you request. You can journal without AI and export your data at any time.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Landing page
+
+<div align="center">
+  <img src="assets/images/landing-page.png" alt="DearDiary landing page preview" width="100%" />
+</div>
+
+The landing page presents DearDiary's features, app screens, privacy principles, FAQs, and early-access signup in a warm, minimal experience that reflects the app itself.
+
+DearDiary is currently preparing for public launch. Join the early-access waitlist through the landing page to be among the first to try it.
